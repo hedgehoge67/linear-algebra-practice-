@@ -1,0 +1,17 @@
+x1, y1 = 5, 2
+x2, y2 = 4, 8
+ax = x2 - x1  
+ay = y2 - y1  
+print(f"Каноническое: (x - {x1}) / {ax} = (y - {y1}) / {ay}")
+print(f"Параметрическое: x = {x1} + ({ax})*t, y = {y1} + ({ay})*t")
+A = ay
+B = -ax
+C = -ay * x1 + ax * y1
+print(f"Общее: {A}x + ({B})y + ({C}) = 0")
+k = -A / B
+b = -C / B
+print(f"С угловым коэффициентом: y = {k}x + {b} (tg(alpha) = {k})")
+if A != 0 and B != 0 and C != 0:
+    a_seg = -C / A
+    b_seg = -C / B
+    print(f"В отрезках: x / ({a_seg:.4f}) + y / ({b_seg:.4f}) = 1")
